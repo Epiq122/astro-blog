@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
 import { capitalize } from '../utils';
 const allBlogArticles = await getCollection<'blog'>('blog');
 const tags: string[] = allBlogArticles.flatMap(
