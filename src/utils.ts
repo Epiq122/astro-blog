@@ -1,4 +1,5 @@
 
+// Format date to a readable format
 function formatDate(date: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
@@ -7,4 +8,10 @@ function formatDate(date: string): string {
   };
   return new Date(date).toLocaleDateString(undefined, options);
 }
-export { formatDate };
+
+// Capitalize first letter of a string
+function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export { formatDate, capitalize };
